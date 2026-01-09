@@ -1,5 +1,8 @@
 #Requires -Version 7.0
 #Requires -Modules Az.KeyVault
+# Author: Joey Brakefield
+# Date: 2025-01-09
+# Description: Scans all datasources in a Microsoft Fabric environment using the Scanner API and uploads results to a Fabric Lakehouse of your choosing.
 
 <#
 .SYNOPSIS
@@ -12,6 +15,14 @@
     - Microsoft Fabric Admin API permissions for the service principal
     - Az.KeyVault module
     - Access to the specified Azure Key Vault
+.PARAMETER TenantId
+    The Azure AD Tenant ID for authentication. Defaults to AZURE_TENANT_ID environment variable.
+.PARAMETER ClientId
+    The Azure AD Client ID for authentication. Defaults to AZURE_CLIENT_ID environment variable.
+.PARAMETER KeyVaultName
+    The name of the Azure Key Vault containing the client secret.
+.PARAMETER SecretName
+    The name of the secret containing the client secret. Defaults to "fabric-scanner-secret".   
 #>
 
 [CmdletBinding()]
