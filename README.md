@@ -139,7 +139,7 @@ The script generates a `fabric-scan-results.json` file with the complete scan re
 
 ![JSON Output Example](images/json-output-example.png)
 
-### Lakehouse Table Results
+### Lakehouse Table Results ⭐ --> Recommended for future Power BI reporting 😀
 
 After running the scanner with Lakehouse output, the `scanner_results` table contains all discovered datasets:
 
